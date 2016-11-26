@@ -27,7 +27,7 @@ using System.Collections.Concurrent;
 namespace time_tracker
 {
 
-    class MainApplication
+    public class MainApplication
     {
         private static Boolean isStarted = false;
         private ActivityTracker activityTracker;    

@@ -110,27 +110,27 @@ namespace time_tracker.communication
             Console.WriteLine("clientSync machineName [serverName]");
             Environment.Exit(1);
         }
-        public static int Main(string[] args)
-        {
-            string serverCertificateName = null;
-            string machineName = null;
-            if (args == null || args.Length < 1)
-            {
-                DisplayUsage();
-            }
-            // User can specify the machine name and server name.
-            // Server name must match the name on the server's certificate. 
-            machineName = args[0];
-            if (args.Length < 2)
-            {
-                serverCertificateName = machineName;
-            }
-            else
-            {
-                serverCertificateName = args[1];
-            }
-            SslTcpClient.RunClient(machineName, serverCertificateName);
-            return 0;
-        }
+        //public static int Main(string[] args)
+        //{
+        //    string serverCertificateName = null;
+        //    string machineName = null;
+        //    if (args == null || args.Length < 1)
+        //    {
+        //        DisplayUsage();
+        //    }
+        //    // User can specify the machine name and server name.
+        //    // Server name must match the name on the server's certificate. 
+        //    machineName = args[0];
+        //    if (args.Length < 2)
+        //    {
+        //        serverCertificateName = machineName;
+        //    }
+        //    else
+        //    {
+        //        serverCertificateName = args[1];
+        //    }
+        //    SslTcpClient.RunClient(machineName, serverCertificateName);
+        //    return 0;
+        //}
     }
 }

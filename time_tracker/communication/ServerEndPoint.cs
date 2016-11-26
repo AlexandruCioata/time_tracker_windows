@@ -167,16 +167,16 @@ namespace time_tracker.communication
             Console.WriteLine("serverSync certificateFile.cer");
             Environment.Exit(1);
         }
-        public static int Main(string[] args)
-        {
-            string certificate = null;
-            if (args == null || args.Length < 1)
-            {
-                DisplayUsage();
-            }
-            certificate = args[0];
-            SslTcpServer.RunServer(certificate);
-            return 0;
-        }
+        //public static int Main(string[] args)
+        //{
+        //    string certificate = null;
+        //    if (args == null || args.Length < 1)
+        //    {
+        //        DisplayUsage();
+        //    }
+        //    certificate = args[0];
+        //    SslTcpServer.RunServer(certificate);
+        //    return 0;
+        //}
     }
 }

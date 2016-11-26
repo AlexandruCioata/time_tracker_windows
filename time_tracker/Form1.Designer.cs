@@ -28,62 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.backLink = new MetroFramework.Controls.MetroLink();
+            this.mainPanel = new MetroFramework.Controls.MetroPanel();
+            this.userName = new MetroFramework.Controls.MetroLabel();
+            this.timerLabel = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
-            // button1
+            // backLink
             // 
-            this.button1.Location = new System.Drawing.Point(21, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.backLink.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backLink.BackgroundImage")));
+            this.backLink.Location = new System.Drawing.Point(23, 23);
+            this.backLink.Name = "backLink";
+            this.backLink.Size = new System.Drawing.Size(32, 32);
+            this.backLink.TabIndex = 3;
+            this.backLink.UseSelectable = true;
+            this.backLink.Visible = false;
+            this.backLink.Click += new System.EventHandler(this.backLink_Click);
             // 
-            // button2
+            // mainPanel
             // 
-            this.button2.Location = new System.Drawing.Point(197, 91);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Stop";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.mainPanel.HorizontalScrollbarBarColor = true;
+            this.mainPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.mainPanel.HorizontalScrollbarSize = 10;
+            this.mainPanel.Location = new System.Drawing.Point(23, 101);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(260, 341);
+            this.mainPanel.TabIndex = 5;
+            this.mainPanel.VerticalScrollbarBarColor = true;
+            this.mainPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.mainPanel.VerticalScrollbarSize = 10;
             // 
-            // button3
+            // userName
             // 
-            this.button3.Location = new System.Drawing.Point(101, 159);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Get data";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.userName.AutoSize = true;
+            this.userName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.userName.Location = new System.Drawing.Point(23, 460);
+            this.userName.Name = "userName";
+            this.userName.Size = new System.Drawing.Size(97, 25);
+            this.userName.TabIndex = 6;
+            this.userName.Text = "User Name";
+            // 
+            // timerLabel
+            // 
+            this.timerLabel.AutoSize = true;
+            this.timerLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.timerLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.timerLabel.Location = new System.Drawing.Point(105, 60);
+            this.timerLabel.Name = "timerLabel";
+            this.timerLabel.Size = new System.Drawing.Size(82, 25);
+            this.timerLabel.TabIndex = 7;
+            this.timerLabel.Text = "00:00:00";
+            this.timerLabel.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(311, 508);
+            this.Controls.Add(this.timerLabel);
+            this.Controls.Add(this.userName);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.backLink);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Black;
+            this.Text = "      Time Tracker";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CloseEvent);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private MetroFramework.Controls.MetroLink backLink;
+        private MetroFramework.Controls.MetroPanel mainPanel;
+        private MetroFramework.Controls.MetroLabel userName;
+        private MetroFramework.Controls.MetroLabel timerLabel;
     }
 }
 
