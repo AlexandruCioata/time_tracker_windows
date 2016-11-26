@@ -1,0 +1,55 @@
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\time_tracker.exe.config
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\obj\Debug\time_tracker.csprojResolveAssemblyReference.cache
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\obj\Debug\time_tracker.Properties.Resources.resources
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\obj\Debug\time_tracker.csproj.GenerateResource.Cache
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\time_tracker.exe
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\time_tracker.pdb
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\GetURLLib.dll
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\Gma.System.MouseKeyHook.dll
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\Gma.UserActivityMonitor.dll
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\log4net.dll
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\ManagedWinapi.dll
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\NDde.dll
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\bin\Debug\Renci.SshNet.dll
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\obj\Debug\time_tracker.exe
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\obj\Debug\time_tracker.pdb
+F:\Drive\workspace\time_tracker\new\time_tracker\time_tracker\obj\Debug\time_tracker.Form1.resources
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\time_tracker.exe.config
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.exe
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.pdb
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\time_tracker.exe
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\time_tracker.pdb
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\GetURLLib.dll
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\Gma.System.MouseKeyHook.dll
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\Gma.UserActivityMonitor.dll
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\log4net.dll
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\ManagedWinapi.dll
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\NDde.dll
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\Renci.SshNet.dll
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.csprojResolveAssemblyReference.cache
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.Form1.resources
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.Properties.Resources.resources
+F:\Drive\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.csproj.GenerateResource.Cache
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\time_tracker.exe.config
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.exe
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.pdb
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\time_tracker.exe
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\time_tracker.pdb
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\GetURLLib.dll
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\Gma.UserActivityMonitor.dll
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\log4net.dll
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\ManagedWinapi.dll
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\NDde.dll
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\bin\Debug\Renci.SshNet.dll
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.csprojResolveAssemblyReference.cache
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.Form1.resources
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.Properties.Resources.resources
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\time_tracker\obj\Debug\time_tracker.csproj.GenerateResource.Cache
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\time_tracker\bin\Debug\time_tracker.exe.config
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\time_tracker\obj\Debug\time_tracker.exe
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\time_tracker\obj\Debug\time_tracker.pdb
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\time_tracker\obj\Debug\time_tracker.csprojResolveAssemblyReference.cache
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\time_tracker\obj\Debug\time_tracker.Form1.resources
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\time_tracker\obj\Debug\time_tracker.Properties.Resources.resources
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\time_tracker\obj\Debug\time_tracker.csproj.GenerateResource.Cache

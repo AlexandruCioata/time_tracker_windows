@@ -1,0 +1,17 @@
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.exe.config
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.exe
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.pdb
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\obj\Debug\ServerSSLSocket.exe
+C:\Users\mihai\Google Drive\Birou\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\obj\Debug\ServerSSLSocket.pdb
+F:\Drive\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.exe.config
+F:\Drive\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.exe
+F:\Drive\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.pdb
+F:\Drive\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\obj\Debug\ServerSSLSocket.csprojResolveAssemblyReference.cache
+F:\Drive\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\obj\Debug\ServerSSLSocket.exe
+F:\Drive\workspace\time_tracker\time_tracker_windows\ServerSSLSocket\obj\Debug\ServerSSLSocket.pdb
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.exe.config
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.exe
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\ServerSSLSocket\bin\Debug\ServerSSLSocket.pdb
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\ServerSSLSocket\obj\Debug\ServerSSLSocket.csprojResolveAssemblyReference.cache
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\ServerSSLSocket\obj\Debug\ServerSSLSocket.exe
+C:\Users\alexb\Google Drive\workspace\TimeTracker\test\time_tracker_windows\ServerSSLSocket\obj\Debug\ServerSSLSocket.pdb
