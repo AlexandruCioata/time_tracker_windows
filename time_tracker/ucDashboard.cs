@@ -7,26 +7,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Controls;
+using System.Diagnostics;
 
 namespace time_tracker
 {
-    public partial class ucDashboard : MetroFramework.Controls.MetroUserControl
+    public partial class ucDashboard : MetroUserControl
     {
         public ucDashboard()
         {
             InitializeComponent();
+            if(Form1.Instance.projectName != null)
+            {
+                string projectName = Form1.Instance.projectName;
+                cbChooseProject.SelectedIndex = cbChooseProject.FindStringExact(projectName);
+            }
         }
 
-        private void Project1_Click(object sender, EventArgs e)
+        private void cbChooseProject_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!Form1.Instance.Container.Controls.ContainsKey("ucTask"))
+            if(cbChooseProject.SelectedIndex > -1)
             {
-                Form1.Instance.Container.Controls.Clear();
-                ucTask task = new ucTask();
-                task.Dock = DockStyle.Fill;
-                Form1.Instance.Container.Controls.Add(task);
+                updateProject.Visible = true;
             }
-            Form1.Instance.Container.Controls["ucTask"].BringToFront();
+        }
+
+        private void updateProject_Click(object sender, EventArgs e)
+        {
+            string projectName = Form1.Instance.projectName;
+            string chosenProject = cbChooseProject.SelectedItem.ToString();
+
+            if (chosenProject != projectName)
+            {
+                projectName = chosenProject;
+                Form1.Instance.projectName = projectName;
+                Form1.Instance.isNewProject = true;
+                Form1.Instance.myTimer = new Timer();
+                Form1.Instance.todayTime = new TimeSpan(0, 0, 0);
+                Form1.Instance.thisWeekTime = new TimeSpan(0, 0, 0);
+                Form1.Instance.stopwatch = new Stopwatch();
+                TimeSpan timeSpan = Form1.Instance.stopwatch.Elapsed;
+                string elapsedTime = String.Format("{0:0h}:{1:00m}:{2:00s}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
+                Form1.Instance.TimerLabel.Text = elapsedTime;
+            }
+            else
+            {
+                Form1.Instance.isNewProject = false;
+            }
+            Form1.Instance.projectName = projectName;
+            Form1.Instance.clearFormContainer();
+            Form1.Instance.createTaskContainer();
             Form1.Instance.Back.Visible = true;
         }
     }

@@ -25,8 +25,6 @@ namespace time_tracker
 
         private void PopupForm_Load(object sender, EventArgs e)
         {
-            countDownLabel.Text = countDown.ToString();
-
             pbLastScreenshot.Image = Image.FromFile(ConfigurationManager.AppSettings["localCacheFolder"] + "/screen.png");
             pbLastScreenshot.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -43,11 +41,20 @@ namespace time_tracker
             string elapsedTime = String.Format("{0}", ts.Seconds);
             int seconds;
             Int32.TryParse(elapsedTime, out seconds);
-            countDownLabel.Text = (countDown - seconds).ToString();
-            if(seconds == countDown)
+            metroLabel1.Text = seconds.ToString();
+            if (seconds < countDown)
+            {
+                popupProgress.Value = seconds;
+            }
+            else
             {
                 this.Close();
             }
+        }
+
+        private void btnCancelSending_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -11,14 +11,20 @@ using MetroFramework.Controls;
 using System.Diagnostics;
 using System.IO;
 using System.Configuration;
+using System.Globalization;
 
 namespace time_tracker
 {
     public partial class ucTask : MetroUserControl
     {
-        Timer myTimer = new Timer();
-        Stopwatch stopwatch = new Stopwatch();
-        static bool isRunning = false;
+        public static string task;
+        public static string newTask;
+        public static TimeSpan todayTimer = new TimeSpan(0, 0, 0);
+        public static string thisWeekTimer;
+        public static string elapsedTime;
+        public static string hours;
+        public static string minutes;
+        private TimeSpan timeSpan;
 
         public ucTask()
         {
@@ -27,89 +33,111 @@ namespace time_tracker
 
         private void ucTask_Load(object sender, EventArgs e)
         {
+            TimeSpan todayTime = Form1.Instance.todayTime;
+            TimeSpan thisWeekTime = Form1.Instance.thisWeekTime;
+
+            bool isNewProject = Form1.Instance.isNewProject;
+
+            Form1.Instance.Back.Visible = Form1.Instance.isRunning ? false : true;
             Form1.Instance.TimerLabel.Visible = true;
-            if(!isRunning)
+            
+            currentProjectLabel.Text = Form1.Instance.projectName;
+            if(newTask != null)
             {
-                btnStop.Visible = false;
+                currentTask.Text = newTask;
             }
-            else
-            {
-                btnStart.Visible = false;
-                btnStop.Visible = true;
-            }
-            pbScreenshot.Image = Image.FromFile(ConfigurationManager.AppSettings["localCacheFolder"] + "/screen.png");
-            pbScreenshot.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
+            task = currentTask.Text;
 
-        private void LoadNewPict()
-        {
-            // You should replace the bold image 
-            // in the sample below with an icon of your own choosing.
-            // Note the escape character used (@) when specifying the path.
-            //pictureBox1.Image = Image.FromFile
-            //(System.Environment.GetFolderPath
-            //(System.Environment.SpecialFolder.Personal)
-            //+ @"\Image.gif");
-        }
+            string elapsedDay = String.Format("{0:0h}:{1:00m}:{2:00s}", todayTime.Hours, todayTime.Minutes, todayTime.Seconds);
+            string elapsedWeek = String.Format("{0:0h}:{1:00m}:{2:00s}", todayTime.Hours, todayTime.Minutes, todayTime.Seconds);
 
-        private void taskLabel_Click(object sender, EventArgs e)
-        {
+            todayTimeLabel.Text = elapsedDay;
+            weekTimeLabel.Text = elapsedWeek;
 
+            checkButtonsStatus();
+            loadScreenShotImage();
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            isRunning = true;
-            Form1.Instance.MainApp.startServices();
+            Form1.Instance.isRunning = true;
+            Form1.Instance.Back.Visible = false;
             btnStart.Visible = false;
             btnStop.Visible = true;
-            myTimer.Tick += new EventHandler(timer_Tick);
-            myTimer.Interval = 1000;
-            myTimer.Enabled = true;
-            myTimer.Start();
-            stopwatch.Start();
+            setTimerValues();
+            Form1.Instance.mainApplication.startServices();
+            Form1.Instance.myTimer.Start();
+            Form1.Instance.stopwatch.Start();
         }
 
-        private void btnStop_Click(object sender, EventArgs e)
+        private void setTimerValues()
         {
-            isRunning = false;
-            if (Form1.Instance.MainApp != null)
-            {
-                
-            }
-            Form1.Instance.MainApp.stopServices();
-            btnStop.Visible = false;
-            btnStart.Visible = true;
-            stopwatch.Stop();
-            myTimer.Stop();  
+            Form1.Instance.myTimer.Tick += new EventHandler(timer_Tick);
+            Form1.Instance.myTimer.Interval = 1000;
+            Form1.Instance.myTimer.Enabled = true;
         }
 
         void timer_Tick(object sender, EventArgs e)
         {
-            TimeSpan ts = stopwatch.Elapsed;
-            string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}",
-                ts.Hours, ts.Minutes, ts.Seconds);
+            timeSpan = Form1.Instance.stopwatch.Elapsed;
+            elapsedTime = String.Format("{0:0h}:{1:00m}:{2:00s}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
             Form1.Instance.TimerLabel.Text = elapsedTime;
-            //if (ts.Seconds == 10)
-            //{
-            //    var form = new PopupForm();
-            //    form.StartPosition = FormStartPosition.Manual;
-            //    form.Location = new Point(this.ClientSize.Width, 0);
-            //    form.Show(this);
-            //}
+            if (timeSpan.Seconds == 10)
+            {
+                Form1.Instance.openPopUp();
+            }
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            Form1.Instance.isRunning = false;
+            Form1.Instance.Back.Visible = true;
+
+            checkButtonsStatus();
+
+            TimeSpan currentTime = Form1.Instance.stopwatch.Elapsed;
+
+            string elapsed = String.Format("{0:0h}:{1:00m}:{2:00s}", currentTime.Hours, currentTime.Minutes, currentTime.Seconds);
+            todayTimeLabel.Text = elapsed;
+            weekTimeLabel.Text = elapsed;
+
+            Form1.Instance.todayTime = currentTime;
+            Form1.Instance.thisWeekTime = currentTime;
+
+            Form1.Instance.mainApplication.stopServices();
+            Form1.Instance.stopwatch.Stop();
+            Form1.Instance.myTimer.Stop();
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            if (!Form1.Instance.Container.Controls.ContainsKey("ucDescription"))
-            {
-                ucDescription description = new ucDescription();
-                description.Dock = DockStyle.Fill;
-                Form1.Instance.Container.Controls.Clear();
-                Form1.Instance.Container.Controls.Add(description);
-            }
-            Form1.Instance.Container.Controls["ucDescription"].BringToFront();
+            Form1.Instance.Container.Controls.Clear();
+            Form1.Instance.createDescriptionContainer();
             Form1.Instance.Back.Visible = true;
+        }
+
+        private void loadScreenShotImage()
+        {
+            pbScreenshot.Image = Image.FromFile(ConfigurationManager.AppSettings["localCacheFolder"] + "/screen.png");
+            pbScreenshot.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void checkButtonsStatus()
+        {
+            btnStart.Visible = Form1.Instance.isRunning ? false : true;
+            btnStop.Visible = Form1.Instance.isRunning ? true : false;
+        }
+
+        private void checkCurrentTaskChange()
+        {
+            if (newTask == null)
+            {
+                newTask = currentTask.Text;
+            }
+            else
+            {
+                currentTask.Text = newTask;
+            }
         }
     }
 }

@@ -51,9 +51,9 @@
             this.mainPanel.HorizontalScrollbarBarColor = true;
             this.mainPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.mainPanel.HorizontalScrollbarSize = 10;
-            this.mainPanel.Location = new System.Drawing.Point(23, 101);
+            this.mainPanel.Location = new System.Drawing.Point(17, 102);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(260, 341);
+            this.mainPanel.Size = new System.Drawing.Size(260, 340);
             this.mainPanel.TabIndex = 5;
             this.mainPanel.VerticalScrollbarBarColor = true;
             this.mainPanel.VerticalScrollbarHighlightOnWheel = false;
@@ -74,18 +74,18 @@
             this.timerLabel.AutoSize = true;
             this.timerLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.timerLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.timerLabel.Location = new System.Drawing.Point(105, 60);
+            this.timerLabel.Location = new System.Drawing.Point(108, 60);
             this.timerLabel.Name = "timerLabel";
-            this.timerLabel.Size = new System.Drawing.Size(82, 25);
+            this.timerLabel.Size = new System.Drawing.Size(74, 25);
             this.timerLabel.TabIndex = 7;
-            this.timerLabel.Text = "00:00:00";
+            this.timerLabel.Text = "0h:00m";
             this.timerLabel.Visible = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 508);
+            this.ClientSize = new System.Drawing.Size(300, 500);
             this.Controls.Add(this.timerLabel);
             this.Controls.Add(this.userName);
             this.Controls.Add(this.mainPanel);

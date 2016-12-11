@@ -28,58 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PopupForm));
             this.pbLastScreenshot = new System.Windows.Forms.PictureBox();
-            this.countDownLabel = new MetroFramework.Controls.MetroLabel();
+            this.popupProgress = new MetroFramework.Controls.MetroProgressSpinner();
+            this.btnCancelSending = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbLastScreenshot)).BeginInit();
             this.SuspendLayout();
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(23, 205);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 1;
-            this.metroButton1.Text = "Yes";
-            this.metroButton1.UseSelectable = true;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(176, 205);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 2;
-            this.metroButton2.Text = "No";
-            this.metroButton2.UseSelectable = true;
             // 
             // pbLastScreenshot
             // 
             this.pbLastScreenshot.Location = new System.Drawing.Point(23, 63);
             this.pbLastScreenshot.Name = "pbLastScreenshot";
-            this.pbLastScreenshot.Size = new System.Drawing.Size(228, 121);
+            this.pbLastScreenshot.Size = new System.Drawing.Size(280, 121);
             this.pbLastScreenshot.TabIndex = 3;
             this.pbLastScreenshot.TabStop = false;
             // 
-            // countDownLabel
+            // popupProgress
             // 
-            this.countDownLabel.AutoSize = true;
-            this.countDownLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.countDownLabel.Location = new System.Drawing.Point(224, 25);
-            this.countDownLabel.Name = "countDownLabel";
-            this.countDownLabel.Size = new System.Drawing.Size(0, 0);
-            this.countDownLabel.TabIndex = 4;
+            this.popupProgress.Location = new System.Drawing.Point(184, 192);
+            this.popupProgress.Maximum = 9;
+            this.popupProgress.Name = "popupProgress";
+            this.popupProgress.Size = new System.Drawing.Size(63, 32);
+            this.popupProgress.Spinning = false;
+            this.popupProgress.TabIndex = 5;
+            this.popupProgress.UseSelectable = true;
+            // 
+            // btnCancelSending
+            // 
+            this.btnCancelSending.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelSending.BackgroundImage")));
+            this.btnCancelSending.Location = new System.Drawing.Point(271, 192);
+            this.btnCancelSending.Name = "btnCancelSending";
+            this.btnCancelSending.Size = new System.Drawing.Size(32, 32);
+            this.btnCancelSending.TabIndex = 6;
+            this.btnCancelSending.UseSelectable = true;
+            this.btnCancelSending.Click += new System.EventHandler(this.btnCancelSending_Click);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 192);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel1.TabIndex = 7;
+            this.metroLabel1.Text = "metroLabel1";
             // 
             // PopupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 251);
-            this.Controls.Add(this.countDownLabel);
+            this.ClientSize = new System.Drawing.Size(326, 251);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.btnCancelSending);
+            this.Controls.Add(this.popupProgress);
             this.Controls.Add(this.pbLastScreenshot);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
             this.Name = "PopupForm";
+            this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "Send Screenshot?";
             this.Load += new System.EventHandler(this.PopupForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLastScreenshot)).EndInit();
@@ -89,9 +93,9 @@
         }
 
         #endregion
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
         private System.Windows.Forms.PictureBox pbLastScreenshot;
-        private MetroFramework.Controls.MetroLabel countDownLabel;
+        private MetroFramework.Controls.MetroProgressSpinner popupProgress;
+        private MetroFramework.Controls.MetroButton btnCancelSending;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
