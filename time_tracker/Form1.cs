@@ -107,5 +107,14 @@ namespace time_tracker
             form.DesktopLocation = new Point(screen.Width - this.ClientSize.Width, screen.Height - this.ClientSize.Height);
             form.Show(this);
         }
+
+        public void openFullScreenshot()
+        {
+            var form = new Screenshot();
+            var screen = Screen.PrimaryScreen.Bounds;
+            //form.StartPosition = FormStartPosition.Manual;
+            //form.DesktopLocation = new Point(screen.Width - this.ClientSize.Width, screen.Height - this.ClientSize.Height);
+            form.Show(this);
+        }
     }
 }

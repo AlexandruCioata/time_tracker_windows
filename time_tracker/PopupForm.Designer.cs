@@ -43,6 +43,7 @@
             this.pbLastScreenshot.Size = new System.Drawing.Size(280, 121);
             this.pbLastScreenshot.TabIndex = 3;
             this.pbLastScreenshot.TabStop = false;
+            this.pbLastScreenshot.Click += new System.EventHandler(this.pbLastScreenshot_Click);
             // 
             // popupProgress
             // 

@@ -44,3 +44,4 @@ C:\Users\alexb\Google Drive\workspace\TimeTracker\time_tracker_windows\time_trac
 C:\Users\alexb\Google Drive\workspace\TimeTracker\time_tracker_windows\time_tracker\obj\x86\Debug\time_tracker.exe
 C:\Users\alexb\Google Drive\workspace\TimeTracker\time_tracker_windows\time_tracker\obj\x86\Debug\time_tracker.pdb
 C:\Users\alexb\Google Drive\workspace\TimeTracker\time_tracker_windows\time_tracker\obj\x86\Debug\time_tracker.csprojResolveAssemblyReference.cache
+C:\Users\alexb\Google Drive\workspace\TimeTracker\time_tracker_windows\time_tracker\obj\x86\Debug\time_tracker.Screenshot.resources

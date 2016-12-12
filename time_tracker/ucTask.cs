@@ -139,5 +139,10 @@ namespace time_tracker
                 currentTask.Text = newTask;
             }
         }
+
+        private void pbScreenshot_Click(object sender, EventArgs e)
+        {
+            Form1.Instance.openFullScreenshot();
+        }
     }
 }

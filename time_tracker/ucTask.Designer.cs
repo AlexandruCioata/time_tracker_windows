@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.currentProjectLabel = new MetroFramework.Controls.MetroLabel();
             this.currentTask = new MetroFramework.Controls.MetroTile();
             this.taskLabel = new MetroFramework.Controls.MetroLabel();
@@ -41,15 +40,6 @@
             this.pbScreenshot = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbScreenshot)).BeginInit();
             this.SuspendLayout();
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(-15, -15);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "metroLabel1";
             // 
             // currentProjectLabel
             // 
@@ -85,7 +75,7 @@
             // 
             this.btnStart.Location = new System.Drawing.Point(163, 6);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(94, 23);
+            this.btnStart.Size = new System.Drawing.Size(95, 30);
             this.btnStart.TabIndex = 6;
             this.btnStart.Text = "Start";
             this.btnStart.UseSelectable = true;
@@ -131,7 +121,7 @@
             // 
             this.btnStop.Location = new System.Drawing.Point(163, 6);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(94, 23);
+            this.btnStop.Size = new System.Drawing.Size(95, 30);
             this.btnStop.TabIndex = 12;
             this.btnStop.Text = "Stop";
             this.btnStop.UseSelectable = true;
@@ -144,6 +134,7 @@
             this.pbScreenshot.Size = new System.Drawing.Size(159, 122);
             this.pbScreenshot.TabIndex = 13;
             this.pbScreenshot.TabStop = false;
+            this.pbScreenshot.Click += new System.EventHandler(this.pbScreenshot_Click);
             // 
             // ucTask
             // 
@@ -159,9 +150,8 @@
             this.Controls.Add(this.taskLabel);
             this.Controls.Add(this.currentTask);
             this.Controls.Add(this.currentProjectLabel);
-            this.Controls.Add(this.metroLabel1);
             this.Name = "ucTask";
-            this.Size = new System.Drawing.Size(260, 317);
+            this.Size = new System.Drawing.Size(260, 330);
             this.Load += new System.EventHandler(this.ucTask_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbScreenshot)).EndInit();
             this.ResumeLayout(false);
@@ -170,8 +160,6 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel currentProjectLabel;
         private MetroFramework.Controls.MetroTile currentTask;
         private MetroFramework.Controls.MetroLabel taskLabel;

@@ -119,6 +119,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screenshot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screenshot.Designer.cs">
+      <DependentUpon>Screenshot.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainApplication.cs" />
     <Compile Include="PopupForm.cs">
       <SubType>Form</SubType>
@@ -151,6 +157,9 @@
     <Compile Include="UserInteractionTime.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screenshot.resx">
+      <DependentUpon>Screenshot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopupForm.resx">
       <DependentUpon>PopupForm.cs</DependentUpon>

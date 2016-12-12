@@ -56,5 +56,10 @@ namespace time_tracker
         {
             this.Close();
         }
+
+        private void pbLastScreenshot_Click(object sender, EventArgs e)
+        {
+            Form1.Instance.openFullScreenshot();
+        }
     }
 }

@@ -63,9 +63,10 @@
             // 
             this.userName.AutoSize = true;
             this.userName.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.userName.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.userName.Location = new System.Drawing.Point(23, 460);
             this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(97, 25);
+            this.userName.Size = new System.Drawing.Size(99, 25);
             this.userName.TabIndex = 6;
             this.userName.Text = "User Name";
             // 

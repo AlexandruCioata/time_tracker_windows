@@ -62,9 +62,9 @@
             // updateProject
             // 
             this.updateProject.ActiveControl = null;
-            this.updateProject.Location = new System.Drawing.Point(3, 125);
+            this.updateProject.Location = new System.Drawing.Point(3, 120);
             this.updateProject.Name = "updateProject";
-            this.updateProject.Size = new System.Drawing.Size(254, 53);
+            this.updateProject.Size = new System.Drawing.Size(254, 50);
             this.updateProject.TabIndex = 7;
             this.updateProject.Text = "Update Project";
             this.updateProject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
