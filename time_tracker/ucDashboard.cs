@@ -42,11 +42,11 @@ namespace time_tracker
                 projectName = chosenProject;
                 Form1.Instance.projectName = projectName;
                 Form1.Instance.isNewProject = true;
-                Form1.Instance.myTimer = new Timer();
+                Form1.myTimer = new Timer();
                 Form1.Instance.todayTime = new TimeSpan(0, 0, 0);
                 Form1.Instance.thisWeekTime = new TimeSpan(0, 0, 0);
-                Form1.Instance.stopwatch = new Stopwatch();
-                TimeSpan timeSpan = Form1.Instance.stopwatch.Elapsed;
+                Form1.stopwatch = new Stopwatch();
+                TimeSpan timeSpan = Form1.stopwatch.Elapsed;
                 string elapsedTime = String.Format("{0:0h}:{1:00m}:{2:00s}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
                 Form1.Instance.TimerLabel.Text = elapsedTime;
             }

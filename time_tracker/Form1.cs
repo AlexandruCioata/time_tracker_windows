@@ -10,11 +10,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework.Controls;
+using System.Runtime.InteropServices;
+
 
 namespace time_tracker
 {
     public partial class Form1 : MetroForm
     {
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
+
         static Form1 _instance;
         public static Form1 Instance { get { if (_instance == null) { _instance = new Form1(); } return _instance; } }
 
@@ -22,8 +29,8 @@ namespace time_tracker
         public MetroLabel TimerLabel { get { return timerLabel; } set { timerLabel = value; } }
         public new MetroPanel Container { get { return mainPanel; } set { mainPanel = value; } }
 
-        public Timer myTimer;
-        public Stopwatch stopwatch;
+        public static Timer myTimer;
+        public static Stopwatch stopwatch;
 
         public TimeSpan todayTime;
         public TimeSpan thisWeekTime;
@@ -34,9 +41,13 @@ namespace time_tracker
 
         public MainApplication mainApplication;
 
+        private TimeSpan timeSpan;
+        public static string elapsedTime;
+
         public Form1()
         {
             InitializeComponent();
+            AllocConsole();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -67,6 +78,19 @@ namespace time_tracker
             {
                 clearFormContainer();
                 createTaskContainer();
+            }
+        }
+
+        public void timer_Tick(object sender, EventArgs e)
+        {
+            timeSpan = Form1.stopwatch.Elapsed;
+            elapsedTime = String.Format("{0:0h}:{1:00m}:{2:00s}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
+            Console.WriteLine(Form1.myTimer);
+            Console.WriteLine(timeSpan.Seconds);
+            Form1.Instance.TimerLabel.Text = elapsedTime;
+            if (timeSpan.Seconds == 10)
+            {
+                Form1.Instance.openPopUp();
             }
         }
 
@@ -112,8 +136,6 @@ namespace time_tracker
         {
             var form = new Screenshot();
             var screen = Screen.PrimaryScreen.Bounds;
-            //form.StartPosition = FormStartPosition.Manual;
-            //form.DesktopLocation = new Point(screen.Width - this.ClientSize.Width, screen.Height - this.ClientSize.Height);
             form.Show(this);
         }
     }

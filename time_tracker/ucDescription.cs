@@ -26,7 +26,7 @@ namespace time_tracker
 
         private void btnStartNewTask_Click(object sender, EventArgs e)
         {
-            TimeSpan timeSpan = Form1.Instance.stopwatch.Elapsed;
+            TimeSpan timeSpan = Form1.stopwatch.Elapsed;
             ucTask.newTask = tbCurrentTask.Text;
 
             bool isRunning = Form1.Instance.isRunning;
@@ -34,8 +34,9 @@ namespace time_tracker
             {
                 Form1.Instance.isRunning = true;
                 Form1.Instance.mainApplication.startServices();
-                Form1.Instance.myTimer.Start();
-                Form1.Instance.stopwatch.Start();
+                Form1.myTimer.Start();
+                Form1.stopwatch.Start();
+                Form1.myTimer.Tick += new EventHandler(Form1.Instance.timer_Tick);
             }
 
             string elapsedDay = String.Format("{0:0h}:{1:00m}:{2:00s}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);

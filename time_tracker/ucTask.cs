@@ -21,10 +21,8 @@ namespace time_tracker
         public static string newTask;
         public static TimeSpan todayTimer = new TimeSpan(0, 0, 0);
         public static string thisWeekTimer;
-        public static string elapsedTime;
         public static string hours;
         public static string minutes;
-        private TimeSpan timeSpan;
 
         public ucTask()
         {
@@ -66,26 +64,15 @@ namespace time_tracker
             btnStop.Visible = true;
             setTimerValues();
             Form1.Instance.mainApplication.startServices();
-            Form1.Instance.myTimer.Start();
-            Form1.Instance.stopwatch.Start();
+            Form1.myTimer.Start();
+            Form1.stopwatch.Start();
         }
 
         private void setTimerValues()
         {
-            Form1.Instance.myTimer.Tick += new EventHandler(timer_Tick);
-            Form1.Instance.myTimer.Interval = 1000;
-            Form1.Instance.myTimer.Enabled = true;
-        }
-
-        void timer_Tick(object sender, EventArgs e)
-        {
-            timeSpan = Form1.Instance.stopwatch.Elapsed;
-            elapsedTime = String.Format("{0:0h}:{1:00m}:{2:00s}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
-            Form1.Instance.TimerLabel.Text = elapsedTime;
-            if (timeSpan.Seconds == 10)
-            {
-                Form1.Instance.openPopUp();
-            }
+            Form1.myTimer.Tick += new EventHandler(Form1.Instance.timer_Tick);
+            Form1.myTimer.Interval = 1000;
+            Form1.myTimer.Enabled = true;
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -95,7 +82,7 @@ namespace time_tracker
 
             checkButtonsStatus();
 
-            TimeSpan currentTime = Form1.Instance.stopwatch.Elapsed;
+            TimeSpan currentTime = Form1.stopwatch.Elapsed;
 
             string elapsed = String.Format("{0:0h}:{1:00m}:{2:00s}", currentTime.Hours, currentTime.Minutes, currentTime.Seconds);
             todayTimeLabel.Text = elapsed;
@@ -105,8 +92,9 @@ namespace time_tracker
             Form1.Instance.thisWeekTime = currentTime;
 
             Form1.Instance.mainApplication.stopServices();
-            Form1.Instance.stopwatch.Stop();
-            Form1.Instance.myTimer.Stop();
+            Form1.stopwatch.Stop();
+            Form1.myTimer.Stop();
+            Form1.myTimer.Tick -= new EventHandler(Form1.Instance.timer_Tick);
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
